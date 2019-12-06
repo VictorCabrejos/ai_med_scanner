@@ -104,7 +104,7 @@ class Model(nn.Module):
 def get_model():
     checkpoint_path='classifier.pt'
     model=models.resnet50(pretrained=True)
-    model.classifier = classifier()
+    model.classifier = Model()
     model.load_state_dict(torch.load(checkpoint_path,map_location='cpu'),strict=False)
     model.eval()
     return model
