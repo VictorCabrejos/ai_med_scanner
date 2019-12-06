@@ -15,7 +15,7 @@ class Model(nn.Module):
         # Transfer Learning
         # leveraging the feature extractor of ResNet-152 
         #  #obtain the ResNet model from torchvision.model library
-        self.model = torchvision.models.resnet50(pretrained=True)
+        self.model = models.resnet50(pretrained=True)
 
         # Building classifier and since we are classifying the images
         # into NORMAL and PNEMONIA, we output a two-dimensional tensor.
